@@ -10,10 +10,13 @@
 		5EDE773828149E4683B00FEB /* Pods_Gallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5D5B2D2EC39F116785274C /* Pods_Gallery.framework */; };
 		B4598C1627C11B510095833D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4598C1527C11B510095833D /* AppDelegate.swift */; };
 		B4598C1827C11B510095833D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4598C1727C11B510095833D /* SceneDelegate.swift */; };
-		B4598C1A27C11B510095833D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4598C1927C11B510095833D /* ViewController.swift */; };
+		B4598C1A27C11B510095833D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4598C1927C11B510095833D /* HomeViewController.swift */; };
 		B4598C1D27C11B510095833D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4598C1B27C11B510095833D /* Main.storyboard */; };
 		B4598C1F27C11B520095833D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4598C1E27C11B520095833D /* Assets.xcassets */; };
 		B4598C2227C11B520095833D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4598C2027C11B520095833D /* LaunchScreen.storyboard */; };
+		B4598C2E27C13AC60095833D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4598C2D27C13AC60095833D /* HomeViewModel.swift */; };
+		B4598C3027C140BD0095833D /* CarousalCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4598C2F27C140BD0095833D /* CarousalCollectionCell.swift */; };
+		B4598C3227C1556E0095833D /* CarousalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4598C3127C1556E0095833D /* CarousalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,11 +25,14 @@
 		B4598C1227C11B510095833D /* Gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4598C1527C11B510095833D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4598C1727C11B510095833D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B4598C1927C11B510095833D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B4598C1927C11B510095833D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B4598C1C27C11B510095833D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4598C1E27C11B520095833D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4598C2127C11B520095833D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4598C2327C11B520095833D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4598C2D27C13AC60095833D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B4598C2F27C140BD0095833D /* CarousalCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarousalCollectionCell.swift; sourceTree = "<group>"; };
+		B4598C3127C1556E0095833D /* CarousalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarousalView.swift; sourceTree = "<group>"; };
 		FB5D5B2D2EC39F116785274C /* Pods_Gallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,7 +88,10 @@
 			children = (
 				B4598C1527C11B510095833D /* AppDelegate.swift */,
 				B4598C1727C11B510095833D /* SceneDelegate.swift */,
-				B4598C1927C11B510095833D /* ViewController.swift */,
+				B4598C1927C11B510095833D /* HomeViewController.swift */,
+				B4598C2F27C140BD0095833D /* CarousalCollectionCell.swift */,
+				B4598C3127C1556E0095833D /* CarousalView.swift */,
+				B4598C2D27C13AC60095833D /* HomeViewModel.swift */,
 				B4598C1B27C11B510095833D /* Main.storyboard */,
 				B4598C1E27C11B520095833D /* Assets.xcassets */,
 				B4598C2027C11B520095833D /* LaunchScreen.storyboard */,
@@ -225,9 +234,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4598C1A27C11B510095833D /* ViewController.swift in Sources */,
+				B4598C1A27C11B510095833D /* HomeViewController.swift in Sources */,
 				B4598C1627C11B510095833D /* AppDelegate.swift in Sources */,
+				B4598C3027C140BD0095833D /* CarousalCollectionCell.swift in Sources */,
 				B4598C1827C11B510095833D /* SceneDelegate.swift in Sources */,
+				B4598C3227C1556E0095833D /* CarousalView.swift in Sources */,
+				B4598C2E27C13AC60095833D /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
