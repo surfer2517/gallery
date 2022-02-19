@@ -1,0 +1,10 @@
+excluded:
+  - Pods
+  
+line_length:
+- 150 # warning
+
+
+  
+
+
