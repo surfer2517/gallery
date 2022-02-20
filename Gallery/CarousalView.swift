@@ -15,8 +15,8 @@ class CarousalView: UIView {
         imageView.snp.makeConstraints {
             $0.left.equalToSuperview()
             $0.top.equalToSuperview()
-            $0.bottom.equalTo(imageViewTwo.snp.top).offset(1)
-            $0.width.equalToSuperview().offset((-(frame.width/2) - 1))
+            $0.bottom.equalToSuperview()
+            $0.width.equalToSuperview().offset((-(frame.width/2) - 20))
         }
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
@@ -24,20 +24,6 @@ class CarousalView: UIView {
     }()
     
     private lazy var imageViewTwo: UIImageView = {
-        let imageView = UIImageView()
-        addSubview(imageView)
-        imageView.snp.makeConstraints {
-            $0.left.equalToSuperview()
-            $0.top.equalTo(imageViewOne.snp.bottom).offset(1)
-            $0.right.equalTo(imageViewFour.snp.left).offset(1)
-            $0.bottom.equalToSuperview()
-        }
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        return imageView
-    }()
-    
-    private lazy var imageViewThree: UIImageView = {
         let imageView = UIImageView()
         addSubview(imageView)
         imageView.snp.makeConstraints {
@@ -51,7 +37,7 @@ class CarousalView: UIView {
         return imageView
     }()
     
-    private lazy var imageViewFour: UIImageView = {
+    private lazy var imageViewThree: UIImageView = {
         let imageView = UIImageView()
         addSubview(imageView)
         imageView.snp.makeConstraints {
@@ -65,7 +51,7 @@ class CarousalView: UIView {
         return imageView
     }()
     
-    private lazy var imageViews = [imageViewOne, imageViewTwo, imageViewThree, imageViewFour]
+    private lazy var imageViews = [imageViewOne, imageViewTwo, imageViewThree]
     
     var model: Model? {
         didSet {

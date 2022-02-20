@@ -54,6 +54,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: CarousalCollectionCell.identifier, for: indexPath) as! CarousalCollectionCell
+        cell.cellModel = viewModel.modelFor(row: indexPath.row)
         return cell
     }
     
