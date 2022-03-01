@@ -14,7 +14,7 @@ class CarousalView: UIView {
         addSubview(imageView)
         imageView.snp.makeConstraints {
             $0.left.equalToSuperview()
-            $0.top.equalToSuperview()
+            $0.top.equalToSuperview().offset(1)
             $0.bottom.equalToSuperview()
             $0.width.equalToSuperview().offset((-(frame.width/2) - 20))
         }
@@ -50,7 +50,7 @@ class CarousalView: UIView {
         imageView.clipsToBounds = true
         return imageView
     }()
-    
+
     private lazy var imageViews = [imageViewOne, imageViewTwo, imageViewThree]
     
     var model: Model? {

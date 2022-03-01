@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UISearchBarDelegate {
     
     let viewModel: HomeViewModel
     
@@ -16,6 +16,37 @@ class HomeViewController: UIViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+        
+        collectionView.reloadData()
+        setupSearchBar()
+    }
+    
+    private func setupSearchBar() {
+        let seacrhController = UISearchController(searchResultsController: nil)
+        navigationItem.searchController = seacrhController
+        seacrhController.hidesNavigationBarDuringPresentation = false
+        seacrhController.obscuresBackgroundDuringPresentation = false
+        seacrhController.searchBar.delegate = self
+    }
+
+//    private lazy var searchBarView: UISearchController = {
+//        let seacrhBar = UISearchController(searchResultsController: nil)
+//        view.addSubview(seacrhBar)
+//        seacrhBar.snp.makeConstraints {
+//        $0.top.equalToSuperview().offset(1)
+//        $0.bottom.equalToSuperview().offset(1)
+//        $0.leading.equalToSuperview().offset(10)
+//        $0.trailing.equalToSuperview().inset(10)
+//    }
+//        seacrhBar.contentMode = .scaleAspectFill
+//        seacrhBar.clipsToBounds = true
+//        return seacrhBar
+//}()
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -35,13 +66,6 @@ class HomeViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        view.backgroundColor = .white
-        collectionView.reloadData()
     }
 
 }
